@@ -1,0 +1,65 @@
+name: python-demos
+description: ''
+version: 0.0.1
+author: nimbus@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: pythondemos
+  parentArtefactID: prophecy_demos
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-09-13 21:01:12'
+pipelines:
+  pipelines/generate_data:
+    name: generate_data
+    description: ''
+    author: nimbus@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-09-13 21:01:12'
+    datasets:
+      inputs: []
+      outputs:
+      - datasets/generated_data
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/generated_data:
+    name: generated_data
+    description: ''
+    author: nimbus@prophecy.io
+    createdAt: '2023-09-13 21:09:06'
+    mode: batch
+    physicalDatasets:
+      product-workspace:
+        fabricId: 4615
+        datasetType: File
+        description: ''
+        author: nimbus@prophecy.io
+        createdAt: '2023-09-13 21:09:06'
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-09-13 21:01:12'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies:
+- type: pypi
+  id: -tpwC
+  name: hvac
+  enabled: false
+  package: hvac==1.2.1
+projectDependencies: {}
+pipelineConfigurations: {}

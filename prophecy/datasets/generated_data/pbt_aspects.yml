@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: row_id
+    type: integer
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: field_a
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

@@ -1,0 +1,8 @@
+version: 1
+configurations:
+- default
+dependencies:
+- type: workflow
+  id: -tpwC
+  name: hvac
+  enabled: true
