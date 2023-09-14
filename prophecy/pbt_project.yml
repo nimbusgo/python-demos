@@ -1,6 +1,6 @@
 name: python-demos
 description: ''
-version: '0.1'
+version: '0.2'
 author: nimbus@prophecy.io
 language: python
 buildSystem: ''
