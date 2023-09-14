@@ -25,6 +25,21 @@ pipelines:
       - datasets/generated_data
     subgraphs: []
     dependencies: {}
+  pipelines/new_pipeline:
+    name: new_pipeline
+    description: ''
+    author: nimbus@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-09-13 23:36:41'
+    datasets:
+      inputs:
+      - datasets/configurable_table
+      - datasets/generated_data
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/generated_data:
     name: generated_data
@@ -39,6 +54,19 @@ datasets:
         description: ''
         author: nimbus@prophecy.io
         createdAt: '2023-09-13 21:09:06'
+  datasets/configurable_table:
+    name: configurable_table
+    description: ''
+    author: nimbus@prophecy.io
+    createdAt: '2023-09-13 23:41:19'
+    mode: batch
+    physicalDatasets:
+      product-workspace:
+        fabricId: 4615
+        datasetType: Database
+        description: ''
+        author: nimbus@prophecy.io
+        createdAt: '2023-09-13 23:41:19'
 templates: {}
 jobs: {}
 functions:

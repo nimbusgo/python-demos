@@ -7,4 +7,8 @@ from generate_data.config.ConfigStore import *
 from generate_data.udfs.UDFs import *
 
 def Reformat_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.select(explode(sequence(lit(0), lit(100))).alias("row_id"), lit("abc").alias("field_a"))
+    return in0.select(
+        explode(sequence(lit(0), lit(100))).alias("row_id"), 
+        lit("abc").alias("field_a"), 
+        lit(Config.param1).alias("field_b")
+    )

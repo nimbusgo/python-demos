@@ -1,0 +1,194 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "uri" : "pipelines/new_pipeline",
+    "language" : "python",
+    "fabricId" : "4615",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "prophecy_demos.pythondemos.functions",
+      "sharedFunctionPackageNames" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "table_name",
+          "kind" : {
+            "type" : "string",
+            "value" : "abc"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "db_name",
+          "kind" : {
+            "type" : "string",
+            "value" : "def"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ {
+      "type" : "pypi",
+      "id" : "-tpwC",
+      "name" : "hvac",
+      "enabled" : false,
+      "package" : "hvac==1.2.1"
+    } ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "new_pipeline",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ ],
+  "processes" : {
+    "pBwC9DKKE9sFA1-6Wr39W$$_ZH_PYrRBwfsM-xkGgiCQ" : {
+      "id" : "pBwC9DKKE9sFA1-6Wr39W$$_ZH_PYrRBwfsM-xkGgiCQ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "generated_data",
+        "slug" : "generated_data",
+        "x" : 240,
+        "y" : 280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "jzh2AGGVjSUqETaQbxkDZ$$D1e22sMSbZqNuIsS_Scko",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/generated_data"
+      }
+    },
+    "pSeDtglUG7XpjFbJjsAoK$$FpGEg5iU8ukjEEbtVGfZB" : {
+      "id" : "pSeDtglUG7XpjFbJjsAoK$$FpGEg5iU8ukjEEbtVGfZB",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "configurable_table",
+        "slug" : "configurable_table",
+        "x" : -380,
+        "y" : 40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "nPMqgMcYcUSIPTPc6KCGj$$lORL1DK0t_7Xavv0fqj5c",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/configurable_table"
+      }
+    },
+    "abf5TWO1XZjwKiXRs8m5T$$2O096kGbnO6li3vbnoZfF" : {
+      "id" : "abf5TWO1XZjwKiXRs8m5T$$2O096kGbnO6li3vbnoZfF",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : -680,
+        "y" : -80,
+        "phase" : -1,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "",
+        "scriptMethodHeader" : "def Script(spark: SparkSession) -> None:",
+        "scriptMethodFooter" : "    return "
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.abf5TWO1XZjwKiXRs8m5T$$2O096kGbnO6li3vbnoZfF.properties.script",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Code cannot be empty.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.pSeDtglUG7XpjFbJjsAoK$$FpGEg5iU8ukjEEbtVGfZB.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}

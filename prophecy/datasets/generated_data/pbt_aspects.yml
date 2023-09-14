@@ -16,3 +16,10 @@ schema:
       description: ''
       mappings: []
       tags: []
+  - name: field_b
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
